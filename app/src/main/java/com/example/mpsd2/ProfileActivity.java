@@ -16,7 +16,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        btn = findViewById(R.id.button2);
+        btn = findViewById(R.id.footBtn5);
 
         btn.setOnClickListener(this);
     }
@@ -24,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.button2:
+            case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));
                 break;
         }

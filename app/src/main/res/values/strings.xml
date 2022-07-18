@@ -3,4 +3,9 @@
     <string name="health_education">Health Education</string>
     <string name="categories">Categories</string>
     <string name="show_all">Show All</string>
+
+    <string name="module1_paragraph1">Infectious diseases are an inherent risk to being in any group. There are steps that you must take to keep your colleagues and guests safe by stopping the spread of germs. \n\n<b>Key Concerns : </b>\n1. Exposure Risk \n2. Handwashing \n3. Coughing and Sneezing \n4. Distancing \n5. Signs of COVID-19</string>
+    <string name="module1_paragraph2"><b>Crowd Management </b>\n● Keep a 6-foot distance away from guests and employees that are not in a similar workspace. \n● Do not permit animals or symptomatic guests/staff to enter or remain in the building \n● Two-party guest limit in our space</string>
+    <string name="module1_paragraph3"><b>Protective Equipment</b>\n● Face masks will be made available as soon as possible\n● Gloves must be worn for all purposes. Gloves must be regularly changed and hands washed during the glove change process.</string>
+
 </resources>

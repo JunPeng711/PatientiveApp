@@ -6,19 +6,16 @@
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2275" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_all_categories.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_health_education.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_health_education.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_modules1.xml" value="0.18848728246318608" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_register_user.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/health_education.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/module_1.xml" value="0.365625" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_register_user.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2_JP/app/src/main/res/layout/activity_health_education2.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2_JP/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2_JP/app/src/main/res/layout/activity_profile.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2_JP/app/src/main/res/layout/activity_register_user.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2_JP/app/src/main/res/layout/health_education.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>
