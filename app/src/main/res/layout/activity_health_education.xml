@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".HealthEducation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -218,10 +218,10 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:src="@drawable/module_icon5"
-                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="false"
                 android:layout_marginLeft="250dp"
-                android:layout_alignParentRight="false"/>
+                android:layout_marginTop="20dp"
+                android:src="@drawable/module_icon5" />
         </RelativeLayout>
 
 
