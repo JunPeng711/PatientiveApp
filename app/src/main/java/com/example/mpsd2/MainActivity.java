@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-//testforgit
+
     private TextView register;
     private EditText loginEmail,loginPassword;
     private Button loginButton;
