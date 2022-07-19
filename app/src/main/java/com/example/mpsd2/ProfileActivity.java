@@ -9,21 +9,27 @@ import android.widget.Button;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        btn = findViewById(R.id.footBtn5);
+        Button homeBtn, healthEducationBtn;
 
-        btn.setOnClickListener(this);
+        homeBtn = findViewById(R.id.footBtn1);
+        homeBtn.setOnClickListener(this);
+
+        healthEducationBtn = findViewById(R.id.footBtn5);
+        healthEducationBtn.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
+            case R.id.footBtn1:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
             case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));
                 break;
