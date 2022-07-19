@@ -22,17 +22,20 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
 
     private void initWidget()
     {
-        Button homeBtn, healthEducationBtn, btn1;
+        Button homeBtn, healthEducationBtn, appointmentBtn, modbtn1;
         Button filterAllBtn, filterCovidBtn, filterExerciseBtn;
+
+        modbtn1 = findViewById(R.id.showBtn1);
+        modbtn1.setOnClickListener(this);
 
         homeBtn = findViewById(R.id.footBtn1);
         homeBtn.setOnClickListener(this);
 
+        appointmentBtn = findViewById(R.id.footBtn4);
+        appointmentBtn.setOnClickListener(this);
+
         healthEducationBtn = findViewById(R.id.footBtn5);
         healthEducationBtn.setOnClickListener(this);
-
-        btn1 = findViewById(R.id.showBtn1);
-        btn1.setOnClickListener(this);
 
 
     }
@@ -46,13 +49,15 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
             case R.id.footBtn1:
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
+            case R.id.footBtn4:
+                startActivity(new Intent(this, Appointment.class));
+                break;
             case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));
                 break;
             case R.id.showBtn1:
                 startActivity(new Intent(this, Modules1.class));
                 break;
-
         }
     }
 

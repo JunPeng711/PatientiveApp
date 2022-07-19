@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Modules1 extends AppCompatActivity implements View.OnClickListener {
+public class HealthcareProfessional extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_modules1);
+        setContentView(R.layout.activity_healthcare_professional);
 
         Button homeBtn, healthEducationBtn, appointmentBtn;
 
@@ -27,7 +27,6 @@ public class Modules1 extends AppCompatActivity implements View.OnClickListener 
 
     }
 
-
     @Override
     public void onClick(View v) {
         switch(v.getId()){
@@ -39,6 +38,9 @@ public class Modules1 extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));
+                break;
+            case R.id.HealthProfBtn:
+                startActivity(new Intent(this, HealthcareProfessional.class));
                 break;
         }
     }
