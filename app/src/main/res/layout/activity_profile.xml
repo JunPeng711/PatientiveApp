@@ -19,7 +19,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="700dp"
-        android:background="@color/white"
+        android:background="#CCC5C5"
         tools:ignore="MissingConstraints">
 
         <Button
