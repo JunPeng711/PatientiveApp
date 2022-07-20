@@ -4,9 +4,9 @@ public class User {
 
     public String email,name,age,phone;
 
-    //public User(){
+    public User(){
 
-    //}
+    }
 
     public User(String email,String name, String age, String phone){
         this.email = email;
