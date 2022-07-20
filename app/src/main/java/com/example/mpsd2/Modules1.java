@@ -35,7 +35,7 @@ public class Modules1 extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.footBtn4:
-                startActivity(new Intent(this, Appointment.class));
+                startActivity(new Intent(this, AddAppointment.class));
                 break;
             case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));

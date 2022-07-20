@@ -2,38 +2,44 @@ package com.example.mpsd2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class Appointment extends AppCompatActivity implements View.OnClickListener{
+public class AddAppointment extends AppCompatActivity implements View.OnClickListener{
 
     DatePicker simpleDatePicker;
     Button submit;
     EditText editDateText;
 
+    EditText name, date, time, patientName, patientIC, healthIssues;
+    SharedPreferences Shared_pref;
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appointment);
+        setContentView(R.layout.activity_add_appointment);
 
         Button cancelBtn;
 
         cancelBtn = findViewById(R.id.cancelBtn);
         cancelBtn.setOnClickListener(this);
 
-        editDateText = findViewById(R.id.editText1);
+
+        Button addBtn = (Button) findViewById(R.id.addBtn);
+        addBtn.setOnClickListener(this);
+
+        editDateText = findViewById(R.id.editDate);
 
         // initiate the date picker and a button
         simpleDatePicker = (DatePicker) findViewById(R.id.simpleDatePicker);
@@ -52,6 +58,21 @@ public class Appointment extends AppCompatActivity implements View.OnClickListen
                 editDateText.autofill(AutofillValue.forText(day+month+year));
             }
         });
+
+
+        name = findViewById(R.id.editName);
+        date = findViewById(R.id.editDate);
+        time = findViewById(R.id.editTime);
+        patientName = findViewById(R.id.editPatientName);
+        patientIC = findViewById(R.id.editPatientIC);
+        healthIssues = findViewById(R.id.editHealthIssues);
+
+        Shared_pref = getSharedPreferences("add_appointment", MODE_PRIVATE);
+        intent = new Intent(AddAppointment.this, ListOfAppointments.class);
+        if(Shared_pref.contains("name") && Shared_pref.contains("date") && Shared_pref.contains("time") && Shared_pref.contains("patientName") && Shared_pref.contains("patientIC") && Shared_pref.contains("healthIssues"))
+        {
+            startActivity(intent);
+        }
     }
 
     public void AddCalendarEvent(View view) {
@@ -71,6 +92,25 @@ public class Appointment extends AppCompatActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.cancelBtn:
                 startActivity(new Intent(this, ProfileActivity.class));
+                break;
+            case R.id.addBtn:
+                String name = AddAppointment.this.name.getText().toString();
+                String date = AddAppointment.this.date.getText().toString();
+                String time = AddAppointment.this.time.getText().toString();
+                String patientName = AddAppointment.this.patientName.getText().toString();
+                String patientIC = AddAppointment.this.patientIC.getText().toString();
+                String healthIssues = AddAppointment.this.healthIssues.getText().toString();
+
+                SharedPreferences.Editor editor = Shared_pref.edit();
+                editor.putString("name", name);
+                editor.putString("date", date);
+                editor.putString("time", time);
+                editor.putString("patientName", patientName);
+                editor.putString("patientIC", patientIC);
+                editor.putString("healthIssues", healthIssues);
+                editor.commit();
+                Toast.makeText(getApplicationContext(), "Add", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
                 break;
         }
     }

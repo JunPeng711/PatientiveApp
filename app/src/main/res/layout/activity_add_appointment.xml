@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Appointment">
+    tools:context=".AddAppointment">
 
 
 <ScrollView
@@ -48,6 +48,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
+                android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"/>
@@ -72,7 +73,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/editDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
@@ -82,7 +83,7 @@
                 android:id="@+id/simpleDatePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText1"
+                android:layout_below="@+id/editDate"
                 android:background="#FF9800"
                 android:datePickerMode="spinner"
                 tools:ignore="MissingConstraints" />
@@ -119,6 +120,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
+                android:id="@+id/editTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"/>
@@ -142,6 +144,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
+                android:id="@+id/editPatientName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"/>
@@ -165,9 +168,10 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
+                android:id="@+id/editPatientIC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="text"/>
         </LinearLayout>
 
         <LinearLayout
@@ -188,6 +192,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
+                android:id="@+id/editHealthIssues"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"/>

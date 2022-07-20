@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class HealthEducation extends AppCompatActivity implements View.OnClickListener{
 
@@ -50,7 +48,7 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.footBtn4:
-                startActivity(new Intent(this, Appointment.class));
+                startActivity(new Intent(this, AddAppointment.class));
                 break;
             case R.id.footBtn5:
                 startActivity(new Intent(this, HealthEducation.class));
