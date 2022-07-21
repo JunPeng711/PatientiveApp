@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +35,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_profile);
 
         Button homeBtn, healthEducationBtn, appointmentBtn, healthcareProfBtn;
+        ImageButton ProfBtn;
 
         homeBtn = findViewById(R.id.footBtn1);
         homeBtn.setOnClickListener(this);
@@ -46,13 +49,15 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         healthcareProfBtn = findViewById(R.id.HealthProfBtn);
         healthcareProfBtn.setOnClickListener(this);
 
+        ProfBtn = findViewById(R.id.profileBttn);
+        ProfBtn.setOnClickListener(this);
+
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        final TextView nameTxtView = (TextView) findViewById(R.id.textViewName);
-        final TextView ageTxtView = (TextView) findViewById(R.id.textViewAge);
+        final TextView welcomeTxtView = (TextView) findViewById(R.id.textViewWelcome);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -61,11 +66,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
                 if(userProfile != null)
                 {
-                    String Name = userProfile.name;
-                    String Age = userProfile.age;
+                    String Welcome = userProfile.name;
 
-                    nameTxtView.setText(Name);
-                    ageTxtView.setText(Age);
+                    welcomeTxtView.setText(Welcome);
                 }
             }
 
@@ -92,6 +95,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.HealthProfBtn:
                 startActivity(new Intent(this, HealthcareProfessional.class));
                 break;
+            case R.id.profileBttn:
+                startActivity(new Intent(this,UserProfile.class));
         }
     }
 }

@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,11 +18,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
 
-    private TextView register;
+    private TextView register,forgotPass;
     private EditText loginEmail,loginPassword;
     private Button loginButton;
 
@@ -32,9 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setTitle("MPSD2");
 
         register = (TextView) findViewById(R.id.registerUser);
         register.setOnClickListener(this);
+
+        forgotPass = (TextView) findViewById(R.id.forgotPassword);
+        forgotPass.setOnClickListener(this);
 
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
@@ -57,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.loginButton:
                 userLogin();
+                break;
+
+            case R.id.forgotPassword:
+                startActivity(new Intent(this,ForgotPassword.class));
                 break;
         }
     }
@@ -93,10 +103,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-                    //startActivity(new Intent(getApplicationContext(), HealthEducation.class));
-                    progressBar.setVisibility((View.GONE));
+                    if(user.isEmailVerified()){
+                        startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                        progressBar.setVisibility((View.GONE));
+                    }else{
+                        user.sendEmailVerification();
+                        Toast.makeText(MainActivity.this, "Check your email to verify your account!", Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Toast.makeText(MainActivity.this, "Failed to login. Please Check your Credential", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility((View.GONE));
