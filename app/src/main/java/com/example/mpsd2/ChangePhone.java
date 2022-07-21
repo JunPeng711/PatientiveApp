@@ -89,6 +89,11 @@ public class ChangePhone extends AppCompatActivity implements View.OnClickListen
             phoneEdit.requestFocus();
             return;
         }
+        if (phone.length()>9){
+            phoneEdit.setError("Please enter a valid phone!");
+            phoneEdit.requestFocus();
+            return;
+        }
         if(!Patterns.PHONE.matcher(phone).matches()){
             phoneEdit.setError("Please enter a valid phone!");
             phoneEdit.requestFocus();
