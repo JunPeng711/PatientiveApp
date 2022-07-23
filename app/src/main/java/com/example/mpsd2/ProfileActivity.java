@@ -34,11 +34,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        Button homeBtn, healthEducationBtn, appointmentBtn, healthcareProfBtn;
+        Button homeBtn, healthEducationBtn, appointmentBtn, healthcareProfBtn, checkInBtn;
         ImageButton ProfBtn;
 
         homeBtn = findViewById(R.id.footBtn1);
         homeBtn.setOnClickListener(this);
+
+        checkInBtn = findViewById(R.id.footBtn3);
+        checkInBtn.setOnClickListener(this);
 
         appointmentBtn = findViewById(R.id.footBtn4);
         appointmentBtn.setOnClickListener(this);
@@ -85,6 +88,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         switch(v.getId()){
             case R.id.footBtn1:
                 startActivity(new Intent(this, ProfileActivity.class));
+                break;
+            case R.id.footBtn3:
+                startActivity(new Intent(this, CheckIn.class));
                 break;
             case R.id.footBtn4:
                 startActivity(new Intent(this, AddAppointment.class));
