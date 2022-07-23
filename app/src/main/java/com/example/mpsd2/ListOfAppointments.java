@@ -1,15 +1,19 @@
 package com.example.mpsd2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.w3c.dom.Text;
 
@@ -18,22 +22,47 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
     SharedPreferences newPreferences;
     Intent newIntent;
 
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_appointments);
 
-        Button homeBtn, healthEducationBtn, appointmentBtn;
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        homeBtn = findViewById(R.id.footBtn1);
-        homeBtn.setOnClickListener(this);
+                if (item.getItemId() == R.id.homePage){
+                    Toast.makeText(ListOfAppointments.this, "homePage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.reportPage){
+                    Toast.makeText(ListOfAppointments.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.checkinPage){
+                    Toast.makeText(ListOfAppointments.this, "checkinPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), CheckIn.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.appointmentPage){
+                    Toast.makeText(ListOfAppointments.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), AddAppointment.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.educationPage){
+                    Toast.makeText(ListOfAppointments.this, "educationPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), HealthEducation.class));
+                    return true;
+                }
 
-        appointmentBtn = findViewById(R.id.footBtn4);
-        appointmentBtn.setOnClickListener(this);
+                return false;
+            }
+        });
 
-        healthEducationBtn = findViewById(R.id.footBtn5);
-        healthEducationBtn.setOnClickListener(this);
 
         TextView name = findViewById(R.id.viewName);
         TextView date = findViewById(R.id.viewDate);
@@ -68,15 +97,7 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
 
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.footBtn1:
-                startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            case R.id.footBtn4:
-                startActivity(new Intent(this, AddAppointment.class));
-                break;
-            case R.id.footBtn5:
-                startActivity(new Intent(this, HealthEducation.class));
-                break;
+
         }
     }
 

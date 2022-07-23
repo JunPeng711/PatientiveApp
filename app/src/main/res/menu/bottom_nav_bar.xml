@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homePage"
+        android:title="HOME"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/reportPage"
+        android:title="Report"
+        android:icon="@drawable/ic_report"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/checkinPage"
+        android:title="Check-In"
+        android:icon="@drawable/ic_checkin"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/appointmentPage"
+        android:title="Appointment"
+        android:icon="@drawable/ic_appointment"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/educationPage"
+        android:title="Education"
+        android:icon="@drawable/ic_education"
+        android:enabled="true"/>
+
+</menu>

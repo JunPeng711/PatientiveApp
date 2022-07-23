@@ -34,14 +34,28 @@
 
             </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/baloo"
-                android:padding="10dp"
-                android:text="@string/modules"
-                android:textAllCaps="true"
-                android:textSize="30dp" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/home"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:padding="10dp"
+                    android:text="@string/modules"
+                    android:textAllCaps="true"
+                    android:textSize="30dp" />
+
+            </LinearLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -256,56 +270,22 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="700dp"
-        android:background="#CCC5C5"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/footBtn1"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:background="@drawable/home_icon"
-            android:layout_marginStart="10dp"
-            android:layout_gravity="bottom"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/white"
+            android:elevation="8dp"
+            app:menu="@menu/bottom_nav_bar"
+            tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/footBtn2"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:background="@drawable/report_icon"
-            android:layout_marginStart="10dp"
-            android:layout_gravity="bottom"/>
-
-        <Button
-            android:id="@+id/footBtn3"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:background="@drawable/checkin_icon"
-            android:layout_marginStart="20dp"
-            android:layout_gravity="bottom"/>
-
-        <Button
-            android:id="@+id/footBtn4"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:background="@drawable/appointment_icon"
-            android:layout_marginStart="20dp"
-            android:layout_gravity="bottom"/>
-
-        <Button
-            android:id="@+id/footBtn5"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:background="@drawable/health_education_icon"
-            android:layout_marginStart="20dp"
-            android:layout_gravity="bottom" />
-    </LinearLayout>
-
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,25 +31,49 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private String userID;
 
+    BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        Button homeBtn, healthEducationBtn, appointmentBtn, healthcareProfBtn, checkInBtn;
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if (item.getItemId() == R.id.homePage){
+                    Toast.makeText(ProfileActivity.this, "homePage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.reportPage){
+                    Toast.makeText(ProfileActivity.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.checkinPage){
+                    Toast.makeText(ProfileActivity.this, "checkinPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), CheckIn.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.appointmentPage){
+                    Toast.makeText(ProfileActivity.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), AddAppointment.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.educationPage){
+                    Toast.makeText(ProfileActivity.this, "educationPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), HealthEducation.class));
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
+        Button healthcareProfBtn;
         ImageButton ProfBtn;
-
-        homeBtn = findViewById(R.id.footBtn1);
-        homeBtn.setOnClickListener(this);
-
-        checkInBtn = findViewById(R.id.footBtn3);
-        checkInBtn.setOnClickListener(this);
-
-        appointmentBtn = findViewById(R.id.footBtn4);
-        appointmentBtn.setOnClickListener(this);
-
-        healthEducationBtn = findViewById(R.id.footBtn5);
-        healthEducationBtn.setOnClickListener(this);
 
         healthcareProfBtn = findViewById(R.id.HealthProfBtn);
         healthcareProfBtn.setOnClickListener(this);
@@ -86,18 +112,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.footBtn1:
-                startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            case R.id.footBtn3:
-                startActivity(new Intent(this, CheckIn.class));
-                break;
-            case R.id.footBtn4:
-                startActivity(new Intent(this, AddAppointment.class));
-                break;
-            case R.id.footBtn5:
-                startActivity(new Intent(this, HealthEducation.class));
-                break;
             case R.id.HealthProfBtn:
                 startActivity(new Intent(this, HealthcareProfessional.class));
                 break;

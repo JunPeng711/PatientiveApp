@@ -14,16 +14,10 @@ public class Modules1 extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modules1);
 
-        Button homeBtn, healthEducationBtn, appointmentBtn;
+        Button backToHomeBtn;
 
-        homeBtn = findViewById(R.id.footBtn1);
-        homeBtn.setOnClickListener(this);
-
-        appointmentBtn = findViewById(R.id.footBtn4);
-        appointmentBtn.setOnClickListener(this);
-
-        healthEducationBtn = findViewById(R.id.footBtn5);
-        healthEducationBtn.setOnClickListener(this);
+        backToHomeBtn = findViewById(R.id.home);
+        backToHomeBtn.setOnClickListener(this);
 
     }
 
@@ -31,15 +25,10 @@ public class Modules1 extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.footBtn1:
+            case R.id.home:
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
-            case R.id.footBtn4:
-                startActivity(new Intent(this, AddAppointment.class));
-                break;
-            case R.id.footBtn5:
-                startActivity(new Intent(this, HealthEducation.class));
-                break;
+
         }
     }
 }

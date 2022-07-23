@@ -1,17 +1,21 @@
 package com.example.mpsd2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;
 
@@ -25,10 +29,47 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
     SharedPreferences Shared_pref;
     Intent intent;
 
+    BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if (item.getItemId() == R.id.homePage){
+                    Toast.makeText(AddAppointment.this, "homePage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.reportPage){
+                    Toast.makeText(AddAppointment.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.checkinPage){
+                    Toast.makeText(AddAppointment.this, "checkinPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), CheckIn.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.appointmentPage){
+                    Toast.makeText(AddAppointment.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), AddAppointment.class));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.educationPage){
+                    Toast.makeText(AddAppointment.this, "educationPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), HealthEducation.class));
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
 
         Button cancelBtn;
 
