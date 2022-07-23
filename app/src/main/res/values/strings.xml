@@ -1,20 +1,12 @@
 <resources>
     <string name="app_name">MPSD2</string>
     <string name="health_education">Health Education</string>
-    <string name="categories">Categories</string>
+    <string name="modules">Modules</string>
     <string name="show_all">Show All</string>
 
     <string name="module1_paragraph1">Infectious diseases are an inherent risk to being in any group. There are steps that you must take to keep your colleagues and guests safe by stopping the spread of germs. \n\n<b>Key Concerns : </b>\n1. Exposure Risk \n2. Handwashing \n3. Coughing and Sneezing \n4. Distancing \n5. Signs of COVID-19</string>
     <string name="module1_paragraph2"><b>Crowd Management </b>\n● Keep a 6-foot distance away from guests and employees that are not in a similar workspace. \n● Do not permit animals or symptomatic guests/staff to enter or remain in the building \n● Two-party guest limit in our space</string>
     <string name="module1_paragraph3"><b>Protective Equipment</b>\n● Face masks will be made available as soon as possible\n● Gloves must be worn for all purposes. Gloves must be regularly changed and hands washed during the glove change process.</string>
     <string name="title_activity_list_of_appointments">ListOfAppointments</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>
