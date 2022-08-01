@@ -3,20 +3,15 @@ package com.example.mpsd2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.example.mpsd2.doc_psychological.DoctorPsychological;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import com.example.mpsd2.doc_details.DoctorPsychological;
 
 public class HealthcareProfessional extends AppCompatActivity implements View.OnClickListener{
 

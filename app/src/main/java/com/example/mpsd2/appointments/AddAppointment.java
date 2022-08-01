@@ -1,4 +1,4 @@
-package com.example.mpsd2;
+package com.example.mpsd2.appointments;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.autofill.AutofillValue;
@@ -15,6 +14,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mpsd2.CheckIn;
+import com.example.mpsd2.ProfileActivity;
+import com.example.mpsd2.R;
+import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;

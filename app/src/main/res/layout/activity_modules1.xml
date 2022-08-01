@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Modules1">
+    tools:context=".education.Modules1">
 
 
 
@@ -37,10 +37,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/home"
+                android:id="@+id/back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/ic_home" />
+                android:background="@drawable/ic_back" />
 
         </LinearLayout>
 
@@ -57,6 +57,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView1"
                 android:padding="10dp"
                 android:textSize="20dp"
+                android:justificationMode="inter_word"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -78,6 +79,7 @@
             android:layout_marginTop="20dp"
             android:padding="10dp"
             android:textSize="20dp"
+            android:justificationMode="inter_word"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -90,6 +92,7 @@
             android:layout_marginTop="20dp"
             android:padding="10dp"
             android:textSize="20dp"
+            android:justificationMode="inter_word"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 

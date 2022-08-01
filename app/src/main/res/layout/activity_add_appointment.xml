@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddAppointment">
+    tools:context=".appointments.AddAppointment">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_height="720dp"
         android:background="#CAC8C8"
         tools:ignore="MissingConstraints">
 
