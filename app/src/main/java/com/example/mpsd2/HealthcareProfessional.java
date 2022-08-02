@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -25,6 +26,11 @@ public class HealthcareProfessional extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_healthcare_professional);
+
+        Button backToHomeBtn;
+
+        backToHomeBtn = findViewById(R.id.back);
+        backToHomeBtn.setOnClickListener(this);
 
         listView = (ListView) findViewById(R.id.DocListView);
         searchView = (SearchView) findViewById(R.id.DocListSearchView);
@@ -72,7 +78,9 @@ public class HealthcareProfessional extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-
+            case R.id.back:
+                startActivity(new Intent(this, HomeActivity.class));
+                break;
         }
     }
 

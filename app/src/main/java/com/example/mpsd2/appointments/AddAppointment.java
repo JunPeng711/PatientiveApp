@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mpsd2.CheckIn;
-import com.example.mpsd2.ProfileActivity;
+import com.example.mpsd2.HomeActivity;
 import com.example.mpsd2.R;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -46,7 +46,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
 
                 if (item.getItemId() == R.id.homePage){
                     Toast.makeText(AddAppointment.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){
@@ -60,7 +60,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
                 }
                 else if (item.getItemId() == R.id.appointmentPage){
                     Toast.makeText(AddAppointment.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), AddAppointment.class));
+                    startActivity(new Intent(getApplicationContext(), ListOfAppointments.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.educationPage){
@@ -135,7 +135,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.cancelBtn:
-                startActivity(new Intent(this, ProfileActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 break;
             case R.id.addBtn:
                 String name = AddAppointment.this.name.getText().toString();

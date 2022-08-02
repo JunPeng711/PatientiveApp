@@ -18,7 +18,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -81,7 +80,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.BackHomeBtn:
-                startActivity(new Intent(this, ProfileActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 break;
         }
     }

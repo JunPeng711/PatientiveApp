@@ -19,6 +19,12 @@
         android:textStyle="bold"
         android:background="#03A9F4"/>
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back" />
+
     <SearchView
         android:id="@+id/DocListSearchView"
         android:layout_width="match_parent"

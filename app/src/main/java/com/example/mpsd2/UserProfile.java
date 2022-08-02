@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +17,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.view.Change;
 
 public class UserProfile extends AppCompatActivity implements View.OnClickListener {
 
@@ -93,7 +91,7 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.BackHomeBttn:
-                startActivity(new Intent(this,ProfileActivity.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 break;
 
             case R.id.LogOutBttn:

@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mpsd2.appointments.AddAppointment;
+import com.example.mpsd2.appointments.ListOfAppointments;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -35,7 +35,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_home);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -44,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
                 if (item.getItemId() == R.id.homePage){
                     //Toast.makeText(ProfileActivity.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){
@@ -58,7 +58,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 else if (item.getItemId() == R.id.appointmentPage){
                     //Toast.makeText(ProfileActivity.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), AddAppointment.class));
+                    startActivity(new Intent(getApplicationContext(), ListOfAppointments.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.educationPage){
@@ -102,7 +102,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ProfileActivity.this, "Errors", Toast.LENGTH_LONG).show();
+                Toast.makeText(HomeActivity.this, "Errors", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -6,25 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".appointments.ListOfAppointments">
 
-    <TextView
-        android:id="@+id/textViewYourAppointment"
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo"
-        android:padding="10dp"
-        android:text="Your Appointment"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="40sp"
-        android:background="#03A9F4"
-        tools:ignore="MissingConstraints" />
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textViewYourAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:padding="10dp"
+            android:text="Your Appointment"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="40sp"
+            android:background="#03A9F4"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_back" />
+
+    </LinearLayout>
+
 
 
     <RelativeLayout
         android:id="@+id/app1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewYourAppointment"
+        app:layout_constraintTop_toBottomOf="@+id/header"
         tools:ignore="MissingConstraints">
 
         <LinearLayout

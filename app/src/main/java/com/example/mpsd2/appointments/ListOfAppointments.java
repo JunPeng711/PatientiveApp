@@ -13,8 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mpsd2.CheckIn;
-import com.example.mpsd2.ProfileActivity;
+import com.example.mpsd2.HomeActivity;
 import com.example.mpsd2.R;
+import com.example.mpsd2.doc_details.DoctorPsychological;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -30,6 +31,11 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_appointments);
 
+        Button backBtn;
+
+        backBtn = findViewById(R.id.back);
+        backBtn.setOnClickListener(this);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -37,7 +43,7 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
 
                 if (item.getItemId() == R.id.homePage){
                     //Toast.makeText(ListOfAppointments.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){
@@ -98,7 +104,9 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
 
     public void onClick(View v) {
         switch(v.getId()){
-
+            case R.id.back:
+                startActivity(new Intent(this, DoctorPsychological.class));
+                break;
         }
     }
 
