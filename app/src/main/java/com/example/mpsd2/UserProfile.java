@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mpsd2.usermenu.ChangePhone;
+import com.example.mpsd2.usermenu.ContactUs;
+import com.example.mpsd2.usermenu.ForgotPassword;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserProfile extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton changePhone,changePass,getContact,logout,home;
+    private Button changePhone,changePass,getContact,logout,home;
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
@@ -83,11 +86,11 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.ChangePassBttn:
-                startActivity(new Intent(this,ForgotPassword.class));
+                startActivity(new Intent(this, ForgotPassword.class));
                 break;
 
             case R.id.ContactBttn:
-
+                startActivity(new Intent(this, ContactUs.class));
                 break;
 
             case R.id.BackHomeBttn:

@@ -8,15 +8,15 @@
 
     <ImageButton
         android:id="@+id/UserProfBttn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.131"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:background="@drawable/profilepic" />
 
     <TextView
         android:id="@+id/UserNameText"
@@ -44,55 +44,84 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.384" />
 
-    <ImageButton
+    <Button
         android:id="@+id/ChangePhoneBttn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467"/>
+        app:layout_constraintVertical_bias="0.467"
+        android:text="Change Phone Number"
+        android:textColor="@color/black"
+        android:backgroundTint="#B5B6BC"
+        android:drawableLeft="@drawable/ic_phone"
+        android:paddingLeft="80dp"
+        android:textAlignment="textStart"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/ChangePassBttn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.561" />
+        app:layout_constraintVertical_bias="0.561"
+        android:text="Change Password"
+        android:textColor="@color/black"
+        android:backgroundTint="#B5B6BC"
+        android:drawableLeft="@drawable/ic_setting"
+        android:paddingLeft="80dp"
+        android:textAlignment="textStart"/>
 
 
-    <ImageButton
+    <Button
         android:id="@+id/ContactBttn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.662"
+        android:text="Contact Us"
+        android:textColor="@color/black"
+        android:backgroundTint="#B5B6BC"
+        android:drawableLeft="@drawable/ic_msg"
+        android:paddingLeft="80dp"
+        android:textAlignment="textStart"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/LogOutBttn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.762"
+        android:text="Log Out"
+        android:textColor="@color/black"
+        android:backgroundTint="#B5B6BC"
+        android:drawableLeft="@drawable/ic_logout"
+        android:paddingLeft="80dp"
+        android:textAlignment="textStart"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/BackHomeBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#95EAF4"
+        android:layout_marginTop="300dp"
+        android:text="Back To Home"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

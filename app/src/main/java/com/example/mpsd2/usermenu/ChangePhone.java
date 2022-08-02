@@ -1,4 +1,4 @@
-package com.example.mpsd2;
+package com.example.mpsd2.usermenu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mpsd2.R;
+import com.example.mpsd2.User;
+import com.example.mpsd2.UserProfile;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -102,7 +105,7 @@ public class ChangePhone extends AppCompatActivity implements View.OnClickListen
         if(!phoneNum.equals(phoneEdit)){
             reference.child(userID).child("phone").setValue(phone);
             Toast.makeText(this, "Update Successful", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this,UserProfile.class));
+            startActivity(new Intent(this, UserProfile.class));
             return;
         }else{
             Toast.makeText(this, "Problem to change phone number. Try again.", Toast.LENGTH_SHORT).show();
