@@ -13,7 +13,7 @@ import com.example.mpsd2.HealthcareProfessional;
 import com.example.mpsd2.appointments.AddAppointment;
 import com.example.mpsd2.CheckIn;
 import com.example.mpsd2.education.HealthEducation;
-import com.example.mpsd2.HomeActivity;
+import com.example.mpsd2.ProfileActivity;
 import com.example.mpsd2.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -47,7 +47,7 @@ public class DoctorPsychological extends FragmentActivity implements View.OnClic
 
                 if (item.getItemId() == R.id.homePage){
                     //Toast.makeText(ProfileActivity.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mpsd2.CheckIn;
-import com.example.mpsd2.HomeActivity;
+import com.example.mpsd2.ProfileActivity;
 import com.example.mpsd2.R;
 import com.example.mpsd2.appointments.ListOfAppointments;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -32,7 +32,7 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
 
                 if (item.getItemId() == R.id.homePage){
                     //Toast.makeText(HealthEducation.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){
@@ -82,7 +82,7 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.home:
-                startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
 
             case R.id.showBtn1:

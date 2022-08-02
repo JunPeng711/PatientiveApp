@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mpsd2.CheckIn;
-import com.example.mpsd2.HomeActivity;
+import com.example.mpsd2.ProfileActivity;
 import com.example.mpsd2.R;
 import com.example.mpsd2.doc_details.DoctorPsychological;
 import com.example.mpsd2.education.HealthEducation;
@@ -43,7 +43,7 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
 
                 if (item.getItemId() == R.id.homePage){
                     //Toast.makeText(ListOfAppointments.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){

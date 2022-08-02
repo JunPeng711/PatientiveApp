@@ -79,7 +79,7 @@ public class HealthcareProfessional extends AppCompatActivity implements View.On
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.back:
-                startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
         }
     }

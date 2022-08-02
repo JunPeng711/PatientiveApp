@@ -80,7 +80,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.BackHomeBtn:
-                startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
         }
     }

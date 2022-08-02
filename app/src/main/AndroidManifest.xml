@@ -52,7 +52,7 @@
             android:name=".education.HealthEducation"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".registerUser"

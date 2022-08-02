@@ -91,7 +91,7 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.BackHomeBttn:
-                startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
 
             case R.id.LogOutBttn:
