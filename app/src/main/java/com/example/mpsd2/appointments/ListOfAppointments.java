@@ -107,7 +107,7 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.back:
-                startActivity(new Intent(this, DoctorPsychological.class));
+                startActivity(new Intent(this, HomeActivity.class));
                 break;
         }
     }

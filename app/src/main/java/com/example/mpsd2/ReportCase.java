@@ -6,19 +6,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.mpsd2.appointments.ListOfAppointments;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.w3c.dom.Text;
+
 public class ReportCase extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+
+    private int CurrentProgress = 0;
+    private ProgressBar progressBar;
+    private Button startProgress;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_case);
+
+
 
         //bottom navigator
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -55,6 +68,31 @@ public class ReportCase extends AppCompatActivity {
                 return false;
             }
         });
+
+        progressBar = findViewById(R.id.progressBar);
+        startProgress = findViewById(R.id.addProgress);
+        TextView percentText = findViewById(R.id.percent);
+
+        startProgress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CurrentProgress = CurrentProgress + 20;
+                progressBar.setProgress(CurrentProgress);
+                progressBar.setMax(100);
+
+                String percent = String.valueOf(CurrentProgress);
+                if (CurrentProgress < 100)
+                {
+                    percentText.setText(percent);
+                }
+                else
+                {
+                    percentText.setText("100");
+                }
+            }
+        });
+
+
 
 
     }
