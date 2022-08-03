@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.mpsd2.CheckIn;
 import com.example.mpsd2.HomeActivity;
 import com.example.mpsd2.R;
+import com.example.mpsd2.ReportCase;
 import com.example.mpsd2.appointments.ListOfAppointments;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,7 +37,8 @@ public class HealthEducation extends AppCompatActivity implements View.OnClickLi
                     return true;
                 }
                 else if (item.getItemId() == R.id.reportPage){
-                    Toast.makeText(HealthEducation.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(HealthEducation.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ReportCase.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.checkinPage){

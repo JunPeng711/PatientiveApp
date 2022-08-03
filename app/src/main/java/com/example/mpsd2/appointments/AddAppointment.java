@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.mpsd2.CheckIn;
 import com.example.mpsd2.HomeActivity;
 import com.example.mpsd2.R;
+import com.example.mpsd2.ReportCase;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -51,6 +52,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
                 }
                 else if (item.getItemId() == R.id.reportPage){
                     Toast.makeText(AddAppointment.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ReportCase.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.checkinPage){

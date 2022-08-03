@@ -91,7 +91,6 @@
             android:elevation="8dp"
             app:menu="@menu/bottom_nav_bar"
             tools:ignore="MissingConstraints" />
-
     </RelativeLayout>
 
 

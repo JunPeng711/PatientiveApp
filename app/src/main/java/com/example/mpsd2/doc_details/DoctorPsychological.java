@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mpsd2.HealthcareProfessional;
+import com.example.mpsd2.ReportCase;
 import com.example.mpsd2.appointments.AddAppointment;
 import com.example.mpsd2.CheckIn;
 import com.example.mpsd2.education.HealthEducation;
@@ -52,6 +53,7 @@ public class DoctorPsychological extends FragmentActivity implements View.OnClic
                 }
                 else if (item.getItemId() == R.id.reportPage){
                     //Toast.makeText(ProfileActivity.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ReportCase.class));
                     return true;
                 }
                 else if (item.getItemId() == R.id.checkinPage){
