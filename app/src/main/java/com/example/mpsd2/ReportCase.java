@@ -25,14 +25,13 @@ public class ReportCase extends AppCompatActivity {
 
     private int CurrentProgress = 0;
     private ProgressBar progressBar;
-    private Button startProgress, day1Btn, day2Btn, day3Btn, day4Btn, day5Btn;
+    private Button startProgress, day1Btn, day2Btn, day3Btn, day4Btn, day5Btn, EmergencyBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_case);
-
 
 
         //bottom navigator
@@ -71,6 +70,7 @@ public class ReportCase extends AppCompatActivity {
             }
         });
 
+        //progressBar + color for dayBtn
         progressBar = findViewById(R.id.progressBar);
         startProgress = findViewById(R.id.addProgress);
         TextView percentText = findViewById(R.id.percent);
@@ -128,6 +128,13 @@ public class ReportCase extends AppCompatActivity {
 
 
 
+        EmergencyBtn = findViewById(R.id.Emergency);
+        EmergencyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Emergency.class));
+            }
+        });
 
     }
 }
