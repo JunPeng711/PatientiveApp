@@ -10,4 +10,6 @@
     <string name="title_activity_list_of_appointments">ListOfAppointments</string>
 
     <string name="psychological_doctor">Dedicated Psychologist with vast experience providing patients with innovative treatment to navigate psychological struggles. Committed to serving as an ongoing support through diagnosis evaluation, and implementation of treatment. Experienced in collaborating with other related service providers to ensure patients are supportedly wholly.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

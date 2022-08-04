@@ -25,9 +25,6 @@
             android:name=".Emergency"
             android:exported="false" />
         <activity
-            android:name=".ReportCase"
-            android:exported="false" />
-        <activity
             android:name=".usermenu.ContactUs"
             android:exported="false" />
 
@@ -51,9 +48,6 @@
             android:name=".UserProfile"
             android:exported="false" />
         <activity
-            android:name=".appointments.ListOfAppointments"
-            android:exported="false" />
-        <activity
             android:name=".HealthcareProfessional"
             android:exported="false" />
         <activity
@@ -61,9 +55,6 @@
             android:exported="false" />
         <activity
             android:name=".education.Modules1"
-            android:exported="false" />
-        <activity
-            android:name=".education.HealthEducation"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

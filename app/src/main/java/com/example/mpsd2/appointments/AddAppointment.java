@@ -1,10 +1,12 @@
 package com.example.mpsd2.appointments;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,9 +18,8 @@ import android.widget.Toast;
 
 import com.example.mpsd2.CheckIn;
 import com.example.mpsd2.HomeActivity;
+import com.example.mpsd2.ListOfAppointmentFragment;
 import com.example.mpsd2.R;
-import com.example.mpsd2.ReportCase;
-import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;
@@ -33,47 +34,11 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
     SharedPreferences Shared_pref;
     Intent intent;
 
-    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
-
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                if (item.getItemId() == R.id.homePage){
-                    Toast.makeText(AddAppointment.this, "homePage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                    return true;
-                }
-                else if (item.getItemId() == R.id.reportPage){
-                    Toast.makeText(AddAppointment.this, "reportPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ReportCase.class));
-                    return true;
-                }
-                else if (item.getItemId() == R.id.checkinPage){
-                    Toast.makeText(AddAppointment.this, "checkinPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), CheckIn.class));
-                    return true;
-                }
-                else if (item.getItemId() == R.id.appointmentPage){
-                    Toast.makeText(AddAppointment.this, "appointmentPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ListOfAppointments.class));
-                    return true;
-                }
-                else if (item.getItemId() == R.id.educationPage){
-                    Toast.makeText(AddAppointment.this, "educationPage is clicked", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), HealthEducation.class));
-                    return true;
-                }
-
-                return false;
-            }
-        });
 
 
         Button cancelBtn;
@@ -92,6 +57,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
         submit = (Button) findViewById(R.id.submitButton);
         // perform click event on submit button
         submit.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 // get the values for day of month , month and year from a date picker
@@ -114,7 +80,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
         healthIssues = findViewById(R.id.editHealthIssues);
 
         Shared_pref = getSharedPreferences("add_appointment", MODE_PRIVATE);
-        intent = new Intent(AddAppointment.this, ListOfAppointments.class);
+        intent = new Intent(AddAppointment.this, ListOfAppointmentFragment.class);
         if(Shared_pref.contains("name") && Shared_pref.contains("date") && Shared_pref.contains("time") && Shared_pref.contains("patientName") && Shared_pref.contains("patientIC") && Shared_pref.contains("healthIssues"))
         {
             startActivity(intent);

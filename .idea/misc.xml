@@ -32,7 +32,20 @@
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/health_education.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/layout/module_1.xml" value="0.365625" />
         <entry key="..\:/AndroidStudioProjects/MPSD2/app/src/main/res/menu/bottom_nav_bar.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_list_of_appointments.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_check_in.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_doctor_psychological.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_emergency.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_health_education.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_home.xml" value="0.22282608695652173" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_list_of_appointments.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_modules1.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/activity_report_case.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/fragment_health_education.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/fragment_home.xml" value="0.35260416666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/fragment_list_of_appointment.xml" value="0.22916666666666666" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/fragment_report.xml" value="0.296195652173913" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/layout/fragment_report_case.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/PatientiveApp/app/src/main/res/menu/bottom_nav_bar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_change_phone.xml" value="0.33" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_forgot_password.xml" value="0.33" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_health_education.xml" value="0.36666666666666664" />
