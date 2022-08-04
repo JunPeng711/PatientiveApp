@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,12 +21,21 @@ import com.example.mpsd2.doc_details.DoctorPsychological;
 import com.example.mpsd2.education.HealthEducation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class ListOfAppointments extends AppCompatActivity implements View.OnClickListener{
 
     SharedPreferences newPreferences;
     Intent newIntent;
 
     BottomNavigationView bottomNavigationView;
+
+    EditText editRoom;
+    Button joinBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +110,29 @@ public class ListOfAppointments extends AppCompatActivity implements View.OnClic
                 edit.commit();
                 Toast.makeText(getApplicationContext(),"Deleted",Toast.LENGTH_SHORT).show();
                 startActivity(newIntent);
+            }
+        });
+
+        editRoom = findViewById(R.id.EditRoom);
+        joinBtn = findViewById(R.id.JoinBtn);
+
+        joinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (editRoom.getText().toString().isEmpty()){
+                    Toast.makeText(ListOfAppointments.this, "Please Enter a Room ID", Toast.LENGTH_LONG).show();
+                }else {
+                    try {
+                        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                                .setServerURL(new URL("https://meet.jit.si"))
+                                .setRoom(editRoom.getText().toString())
+                                .setAudioOnly(true)
+                                .build();
+                        JitsiMeetActivity.launch(ListOfAppointments.this,options);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }

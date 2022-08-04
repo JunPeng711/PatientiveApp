@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.mpsd2"
-        minSdk 26
-        targetSdk 32
+        minSdk 23
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -43,4 +43,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    // (other dependencies)
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
 }
