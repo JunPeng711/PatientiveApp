@@ -2,8 +2,10 @@ package com.example.mpsd2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +25,7 @@ public class ReportCase extends AppCompatActivity {
 
     private int CurrentProgress = 0;
     private ProgressBar progressBar;
-    private Button startProgress;
+    private Button startProgress, day1Btn, day2Btn, day3Btn, day4Btn, day5Btn;
 
 
     @Override
@@ -73,6 +75,12 @@ public class ReportCase extends AppCompatActivity {
         startProgress = findViewById(R.id.addProgress);
         TextView percentText = findViewById(R.id.percent);
 
+        day1Btn = findViewById(R.id.day1);
+        day2Btn = findViewById(R.id.day2);
+        day3Btn = findViewById(R.id.day3);
+        day4Btn = findViewById(R.id.day4);
+        day5Btn = findViewById(R.id.day5);
+
         startProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +96,31 @@ public class ReportCase extends AppCompatActivity {
                 else
                 {
                     percentText.setText("100");
+                }
+
+                if (CurrentProgress <= 20)
+                {
+                    day1Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
+                }
+                else if (CurrentProgress > 20 && CurrentProgress <= 40)
+                {
+                    day1Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                    day2Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
+                }
+                else if (CurrentProgress > 40 && CurrentProgress <= 60)
+                {
+                    day2Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                    day3Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
+                }
+                else if (CurrentProgress > 60 && CurrentProgress <= 80)
+                {
+                    day3Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                    day4Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
+                }
+                else if (CurrentProgress > 80 && CurrentProgress <= 100)
+                {
+                    day4Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                    day5Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
                 }
             }
         });

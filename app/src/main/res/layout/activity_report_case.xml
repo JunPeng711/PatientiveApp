@@ -103,13 +103,65 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/day1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Day \n1"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/themecol"/>
+
+            <Button
+                android:id="@+id/day2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Day \n2"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/day3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Day \n3"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/day4"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Day \n4"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/day5"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Day \n5"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medicines"
             android:textSize="30sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:textStyle="bold"/>
 
         <LinearLayout
@@ -169,15 +221,38 @@
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/addProgress"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Add" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp">
 
+            <Button
+                android:id="@+id/addProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:backgroundTint="#2196F3"/>
+
+            <Button
+                android:id="@+id/Recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recovered"
+                android:layout_margin="10dp"
+                android:backgroundTint="#73D600"/>
+
+            <Button
+                android:id="@+id/Emergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency"
+                android:backgroundTint="#ED0000"/>
+        </LinearLayout>
 
     </LinearLayout>
+
 
 
     //bottom navigator
