@@ -98,6 +98,7 @@ public class ReportCase extends AppCompatActivity {
                     percentText.setText("100");
                 }
 
+                //change button color when user click addbtn
                 if (CurrentProgress <= 20)
                 {
                     day1Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
