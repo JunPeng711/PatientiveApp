@@ -20,13 +20,13 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#03A9F4"
+                android:gravity="center"
                 android:padding="30dp"
                 android:text="Doctor Details"
-                android:gravity="center"
                 android:textAllCaps="true"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                android:background="#03A9F4"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/back"
@@ -36,49 +36,51 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:background="@drawable/bg1"
-                android:layout_margin="20dp">
+                android:layout_height="112dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/doctor_panel">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="342dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/module_icon" />
+                        android:layout_width="67dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/profilepic" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="272dp"
+                        android:layout_height="115dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/docName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="17dp"
+                            android:fontFamily="@font/baloo"
                             android:text="Dr. Susanto"
-                            android:textSize="30sp"
-                            android:fontFamily="@font/baloo"
-                            android:layout_marginLeft="30dp"/>
+                            android:textSize="20sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="222dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:fontFamily="@font/baloo"
                             android:text="Psychology Specialist - Kuala Lumpur"
-                            android:textSize="20sp"
-                            android:fontFamily="@font/baloo"
-                            android:layout_marginLeft="30dp"/>
+                            android:textSize="13sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+60165531234"
-                            android:textSize="20sp"
+                            android:layout_marginLeft="30dp"
                             android:fontFamily="@font/baloo"
-                            android:layout_marginLeft="30dp"/>
+                            android:text="+60165531234"
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -89,27 +91,20 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
-                    android:background="#E6F4FF"
+                    android:background="@drawable/experience_panel"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Experience"
-                        android:textSize="20sp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
+                        android:layout_marginTop="40dp"
                         android:text="8 Years"
-                        android:textStyle="bold"
+                        android:textAlignment="center"
                         android:textSize="20sp"
-                        android:layout_marginTop="30dp"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -123,17 +118,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rating"
-                        android:textSize="20sp"
-                        android:textAlignment="center"/>
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
+                        android:layout_marginTop="30dp"
                         android:text="4.3"
-                        android:textStyle="bold"
+                        android:textAlignment="center"
                         android:textSize="20sp"
-                        android:layout_marginTop="30dp"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <Button
@@ -141,18 +136,18 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_margin="10dp"
+                    android:background="@drawable/ic_save"
                     android:text="Book"
-                    android:textSize="10sp"
                     android:textAlignment="center"
-                    android:background="@drawable/ic_save"/>
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="20dp">
+                android:layout_margin="20dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -164,28 +159,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/psychological_doctor"
-                    android:justificationMode="inter_word"/>
+                    android:justificationMode="inter_word"
+                    android:text="@string/psychological_doctor" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Location"
                     android:textSize="25sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <fragment
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
                     android:id="@+id/map"
-                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
 
 
             </LinearLayout>

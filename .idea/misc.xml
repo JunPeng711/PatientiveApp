@@ -56,7 +56,21 @@
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_register_user.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/MPSD2/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
-        <entry key="..\:/Users/PC/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_report_question.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_add_appointment.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_change_phone.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_check_in.xml" value="0.33" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_contact_us.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_doctor_psychological.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_health_education.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_home.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_modules1.xml" value="0.25" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_register_user.xml" value="0.33" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/fragment_health_education.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/fragment_home.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/hsien/Documents/GitHub/PatientiveApp/app/src/main/res/layout/fragment_list_of_appointment.xml" value="0.29743589743589743" />
       </map>
     </option>
   </component>
