@@ -1,6 +1,8 @@
 package com.example.mpsd2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mpsd2.appointments.AddAppointment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +32,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     private String userID;
 
+
     TextView welcomeTxtView;
+    SharedPreferences newPreferences;
+    Intent newIntent;
 
 
     public HomeFragment() {
@@ -84,6 +90,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         ProfBtn = view.findViewById(R.id.profileBttn);
         ProfBtn.setOnClickListener(this);
+
+
+
+        TextView name = view.findViewById(R.id.viewName);
+        TextView date = view.findViewById(R.id.viewDate);
+        TextView time = view.findViewById(R.id.viewTime);
+
+        newPreferences = this.getActivity().getSharedPreferences("add_appointment", Context.MODE_PRIVATE);
+        newIntent = new Intent(getActivity(), AddAppointment.class);
+
+        name.setText(newPreferences.getString("name", null));
+        date.setText(newPreferences.getString("date", null));
+        time.setText(newPreferences.getString("time", null));
 
         return view;
     }
