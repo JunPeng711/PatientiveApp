@@ -69,6 +69,11 @@ public class ReportFragment extends Fragment implements View.OnClickListener{
                 CurrentProgress = 0;
                 percentText.setText("0");
                 progressBar.setProgress(0);
+                day1Btn.setBackgroundColor(getResources().getColor(R.color.themecol));
+                day2Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                day3Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                day4Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                day5Btn.setBackgroundColor(getResources().getColor(R.color.white));
             }
         });
 
@@ -112,20 +117,16 @@ public class ReportFragment extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.submitBttn:
-                if (questionTwo.getText().toString().isEmpty() & questionFour.getText().toString().isEmpty() & questionFive.getText().toString().isEmpty()){
+                if (questionTwo.getText().toString().isEmpty() && questionFour.getText().toString().isEmpty() && questionFive.getText().toString().isEmpty()){
                     questionTwo.setError("You haven't completed this question!");
                     questionFour.setError("You haven't completed this question!");
                     questionFive.setError("You haven't completed this question!");
+                } if (questionOne.isChecked() && questionThree.isChecked()){
+                    addProgress();
+                    Toast.makeText(getActivity(), "Received Report", Toast.LENGTH_SHORT).show();
                 }else{
-                    if (questionOne.isChecked() & questionThree.isChecked()){
-                        addProgress();
-                        Toast.makeText(getActivity(), "Received Report", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(getActivity(), "The question is not fully answered.", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(getActivity(), "The question is not fully answered.", Toast.LENGTH_SHORT).show();
                 }
-
-
         }
     }
 
