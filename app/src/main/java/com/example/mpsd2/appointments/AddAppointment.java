@@ -80,7 +80,7 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
         healthIssues = findViewById(R.id.editHealthIssues);
 
         Shared_pref = getSharedPreferences("add_appointment", MODE_PRIVATE);
-        intent = new Intent(AddAppointment.this, ListOfAppointmentFragment.class);
+        intent = new Intent(AddAppointment.this, HomeActivity.class);
         if(Shared_pref.contains("name") && Shared_pref.contains("date") && Shared_pref.contains("time") && Shared_pref.contains("patientName") && Shared_pref.contains("patientIC") && Shared_pref.contains("healthIssues"))
         {
             startActivity(intent);

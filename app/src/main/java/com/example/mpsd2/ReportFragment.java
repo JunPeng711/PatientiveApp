@@ -53,6 +53,7 @@ public class ReportFragment extends Fragment {
                 CurrentProgress = CurrentProgress + 20;
                 progressBar.setProgress(CurrentProgress);
                 progressBar.setMax(100);
+                startActivity(new Intent(getActivity(),ReportQuestion.class));
 
                 String percent = String.valueOf(CurrentProgress);
                 if (CurrentProgress < 100)
