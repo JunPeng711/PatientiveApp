@@ -262,6 +262,89 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:padding="10dp"
+                    android:text="Form"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="40sp"
+                    android:background="@color/themecol" />
+
+                <CheckedTextView
+                    android:id="@+id/questionText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:hint="Have you eaten the medicines for today?" />
+
+
+                <EditText
+                    android:id="@+id/questionText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:hint="How are you feeling today?"
+                    android:inputType="textPersonName" />
+
+
+                <CheckedTextView
+                    android:id="@+id/questionText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:hint="Are you feeling better than yesterday?" />
+
+
+                <EditText
+                    android:id="@+id/questionText4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:hint="How is your sleep last night?"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/questionText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:hint="How is your appetite?"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/submitBttn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:layout_gravity="center"
+                    android:textColorHint="#AF3131"
+                    app:rippleColor="#853D3D" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
 
