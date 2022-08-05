@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +26,8 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
-    private TextView login, registerButton;
+    private TextView login;
+    private ImageButton registerButton;
     private EditText registerEmail, registerName, registerAge, registerPhone, registerPassword;
     private ProgressBar progressBar;
 
@@ -41,7 +43,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         login = (TextView) findViewById(R.id.loginUser);
         login.setOnClickListener(this);
 
-        registerButton = (Button) findViewById(R.id.registerButton);
+        registerButton = (ImageButton) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(this);
 
         registerEmail = (EditText) findViewById(R.id.registerEmail);

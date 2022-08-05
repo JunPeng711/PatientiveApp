@@ -8,6 +8,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class ForgotPassword extends AppCompatActivity {
 
     private EditText emailText;
-    private Button resetPass;
+    private ImageButton resetPass;
     private ProgressBar progressBar;
 
     FirebaseAuth auth;

@@ -6,17 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".UserProfile">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="395dp"
+        android:layout_height="203dp"
+        android:background="@drawable/top_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="336dp"
+        android:layout_height="187dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
     <ImageButton
         android:id="@+id/UserProfBttn"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="96dp"
+        android:layout_height="92dp"
+        android:background="@drawable/profilepic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131"
-        android:background="@drawable/profilepic" />
+        app:layout_constraintVertical_bias="0.347" />
+
+    <ImageButton
+        android:id="@+id/ChangePhoneBttn"
+        android:layout_width="292dp"
+        android:layout_height="38dp"
+        android:background="@drawable/change_phonenum"
+        android:rotation="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586" />
+
+    <ImageButton
+        android:id="@+id/LogOutBttn"
+        android:layout_width="216dp"
+        android:layout_height="28dp"
+        android:background="@drawable/logout"
+        android:rotation="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <ImageButton
+        android:id="@+id/ChangePassBttn"
+        android:layout_width="292dp"
+        android:layout_height="38dp"
+        android:background="@drawable/change_password"
+        android:rotation="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <ImageButton
+        android:id="@+id/ContactBttn"
+        android:layout_width="292dp"
+        android:layout_height="38dp"
+        android:background="@drawable/contact_us"
+        android:rotation="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753" />
 
     <TextView
         android:id="@+id/UserNameText"
@@ -24,13 +98,13 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343"
-        android:textStyle="bold"/>
+        app:layout_constraintVertical_bias="0.446" />
 
     <TextView
         android:id="@+id/UserEmailText"
@@ -39,95 +113,22 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
-
-    <Button
-        android:id="@+id/ChangePhoneBttn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467"
-        android:text="Change Phone Number"
-        android:textColor="@color/black"
-        android:backgroundTint="#B5B6BC"
-        android:drawableLeft="@drawable/ic_phone"
-        android:paddingLeft="80dp"
-        android:textAlignment="textStart"/>
+        app:layout_constraintVertical_bias="0.485" />
 
-    <Button
-        android:id="@+id/ChangePassBttn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.561"
-        android:text="Change Password"
-        android:textColor="@color/black"
-        android:backgroundTint="#B5B6BC"
-        android:drawableLeft="@drawable/ic_setting"
-        android:paddingLeft="80dp"
-        android:textAlignment="textStart"/>
-
-
-    <Button
-        android:id="@+id/ContactBttn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662"
-        android:text="Contact Us"
-        android:textColor="@color/black"
-        android:backgroundTint="#B5B6BC"
-        android:drawableLeft="@drawable/ic_msg"
-        android:paddingLeft="80dp"
-        android:textAlignment="textStart"/>
-
-    <Button
-        android:id="@+id/LogOutBttn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762"
-        android:text="Log Out"
-        android:textColor="@color/black"
-        android:backgroundTint="#B5B6BC"
-        android:drawableLeft="@drawable/ic_logout"
-        android:paddingLeft="80dp"
-        android:textAlignment="textStart"/>
-
-    <Button
+    <ImageButton
         android:id="@+id/BackHomeBttn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#95EAF4"
+        android:layout_width="365dp"
+        android:layout_height="59dp"
         android:layout_marginTop="300dp"
-        android:text="Back To Home"
-        android:textAlignment="center"
-        android:textColor="@color/black"
+        android:background="@drawable/back_home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.912" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
