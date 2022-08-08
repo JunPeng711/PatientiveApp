@@ -7,30 +7,39 @@
     android:orientation="vertical"
     tools:context=".HealthcareProfessional">
 
-    <TextView
-        android:id="@+id/textView1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:text="Search"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="#03A9F4"/>
+        android:layout_height="151dp">
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_back" />
+        <ImageView
+        android:id="@+id/imageViewBanner"
+        android:layout_width="398dp"
+        android:layout_height="151dp"
+        android:background="@drawable/top_banner4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/left_arrow" />
+    </RelativeLayout>
+
 
     <SearchView
         android:id="@+id/DocListSearchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-25dp"
+        android:layout_gravity="center"
         android:iconifiedByDefault="false"
-        android:queryHint="Keyword">
+        android:background="@drawable/input_field"
+        android:queryHint="Enter A Search Term">
     </SearchView>
 
     <ListView

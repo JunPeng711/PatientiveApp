@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         });
 
 
-        Button healthcareProfBtn;
+        ImageButton healthcareProfBtn;
         ImageButton ProfBtn;
 
         healthcareProfBtn = view.findViewById(R.id.HealthProfBtn);

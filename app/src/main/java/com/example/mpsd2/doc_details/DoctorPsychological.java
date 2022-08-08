@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mpsd2.HealthcareProfessional;
@@ -31,9 +32,9 @@ public class DoctorPsychological extends FragmentActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_psychological);
-        Button backToHomeBtn, bookBtn;
+        ImageButton bookBtn;
 
-        backToHomeBtn = findViewById(R.id.back);
+        ImageButton backToHomeBtn = findViewById(R.id.back);
         backToHomeBtn.setOnClickListener(this);
 
         bookBtn = findViewById(R.id.book);

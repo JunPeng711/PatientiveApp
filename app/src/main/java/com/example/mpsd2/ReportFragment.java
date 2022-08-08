@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +21,10 @@ public class ReportFragment extends Fragment implements View.OnClickListener{
 
     private int CurrentProgress = 0;
     private ProgressBar progressBar;
-    private Button startProgress, day1Btn, day2Btn, day3Btn, day4Btn, day5Btn, EmergencyBtn,recoverButton;
+    private Button startProgress, day1Btn, day2Btn, day3Btn, day4Btn, day5Btn;
     private CheckedTextView questionOne,questionThree;
     private EditText questionTwo,questionFour,questionFive;
-    private Button submit;
+    private ImageButton submit,EmergencyBtn,recoverButton;
     private TextView percentText;
 
     public ReportFragment() {

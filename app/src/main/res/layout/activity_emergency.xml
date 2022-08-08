@@ -6,64 +6,61 @@
     android:orientation="vertical"
     tools:context=".Emergency">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo"
-        android:padding="10dp"
-        android:text="Emergency"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="40sp"
-        android:background="#F44336" />
+    <ImageView
+        android:id="@+id/imageViewBanner"
+        android:layout_width="398dp"
+        android:layout_height="151dp"
+        android:background="@drawable/top_banner5" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:background="@drawable/bg1"
-        android:layout_margin="20dp">
+        android:layout_height="112dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-45dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/doctor_panel">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="342dp"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/module_icon" />
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/profilepic" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="272dp"
+                android:layout_height="115dp"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/docName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dr. Susanto"
-                    android:textSize="30sp"
-                    android:fontFamily="@font/baloo"
-                    android:layout_marginLeft="30dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Psychology Specialist - Kuala Lumpur"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/baloo"
-                    android:layout_marginLeft="30dp"/>
 
                 <TextView
                     android:id="@+id/doc_num1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0165531234"
-                    android:textSize="20sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="17dp"
                     android:fontFamily="@font/baloo"
-                    android:layout_marginLeft="30dp"/>
+                    android:text="Dr. Susanto"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="222dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/baloo"
+                    android:text="Psychology Specialist - Kuala Lumpur"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/baloo"
+                    android:text="+60165531234"
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -71,12 +68,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/contactDocBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:text="Call"
-        android:background="@drawable/btn_design">
-    </androidx.appcompat.widget.AppCompatButton>
+        android:layout_width="350dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/contact_btn"></androidx.appcompat.widget.AppCompatButton>
 
 
 </LinearLayout>

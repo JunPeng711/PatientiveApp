@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ChangePhone extends AppCompatActivity implements View.OnClickListener{
 
     private EditText phoneEdit;
-    private Button update;
+    private ImageButton update;
 
     public String phoneTxt;
     public TextView phoneNum;

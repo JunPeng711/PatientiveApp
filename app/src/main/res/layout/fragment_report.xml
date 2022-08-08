@@ -18,37 +18,40 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView1"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#03A9F4"
-                android:fontFamily="@font/baloo"
-                android:padding="10dp"
-                android:text="Current Case"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textSize="40sp" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewBanner"
+                    android:layout_width="398dp"
+                    android:layout_height="151dp"
+                    android:background="@drawable/top_banner8" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/bg1">
+                android:layout_height="112dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/doctor_panel">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="342dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/module_icon" />
+                        android:layout_width="67dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/profilepic" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="272dp"
+                        android:layout_height="115dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -56,17 +59,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
+                            android:layout_marginTop="17dp"
                             android:fontFamily="@font/baloo"
                             android:text="Dr. Susanto"
-                            android:textSize="30sp" />
+                            android:textSize="20sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="222dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
                             android:fontFamily="@font/baloo"
                             android:text="Psychology Specialist - Kuala Lumpur"
-                            android:textSize="20sp" />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -74,7 +78,7 @@
                             android:layout_marginLeft="30dp"
                             android:fontFamily="@font/baloo"
                             android:text="+60165531234"
-                            android:textSize="20sp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -82,36 +86,51 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:progressDrawable="@drawable/custom_progress_bg" />
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="352dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="-25dp"
+                    android:layout_gravity="center"
                     android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:fontFamily="@font/baloo"
+                        android:text="Status"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:fontFamily="@font/baloo"
                         android:text="0"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
                         android:text=" %"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:progressDrawable="@drawable/custom_progress_bg" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,9 +189,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
                     android:text="Medicines"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/baloo"
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -183,49 +203,53 @@
 
                     <LinearLayout
                         android:layout_width="150dp"
-                        android:layout_height="100dp"
-                        android:background="#E6F4FF"
+                        android:layout_height="120dp"
+                        android:background="@drawable/appointment_panel"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text="Antibiotic"
                             android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="15dp"
                             android:text="Morning After Meal"
                             android:textAlignment="center"
-                            android:textSize="20sp" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="150dp"
-                        android:layout_height="100dp"
+                        android:layout_height="120dp"
                         android:layout_marginStart="60dp"
-                        android:background="#E6F4FF"
+                        android:background="@drawable/appointment_panel"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text="Cough Syrup"
                             android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="15dp"
                             android:text="Morning After Meal"
                             android:textAlignment="center"
-                            android:textSize="20sp" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -238,19 +262,18 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/Recovered"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="111dp"
+                        android:layout_height="41dp"
                         android:layout_margin="10dp"
-                        android:backgroundTint="#73D600"
-                        android:text="Recovered" />
+                        android:background="@drawable/recover_btn" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/Emergency"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#ED0000"
+                        android:layout_width="111dp"
+                        android:layout_height="41dp"
+                        android:background="@drawable/emergency_btn"
                         android:text="Emergency" />
                 </LinearLayout>
 
@@ -261,78 +284,87 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
-                <TextView
-                    android:id="@+id/textView2"
+                <ImageView
+                    android:id="@+id/imageViewBanner2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/baloo"
-                    android:padding="10dp"
-                    android:text="Form"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textSize="40sp"
-                    android:background="@color/themecol" />
-
-                <CheckedTextView
-                    android:id="@+id/questionText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textSize="20sp"
-                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                    android:checked="false"
-                    android:hint="Have you eaten the medicines for today?" />
-
+                    android:layout_height="80dp"
+                    android:background="@drawable/top_banner9" />
 
                 <EditText
                     android:id="@+id/questionText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_field"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="30dp"
+                    android:textSize="12sp"
                     android:ems="10"
-                    android:layout_margin="10dp"
-                    android:textSize="20sp"
                     android:hint="How are you feeling today?"
                     android:inputType="textPersonName" />
 
 
-                <CheckedTextView
-                    android:id="@+id/questionText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textSize="20sp"
-                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                    android:checked="false"
-                    android:hint="Are you feeling better than yesterday?" />
-
-
                 <EditText
                     android:id="@+id/questionText4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_field"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="30dp"
+                    android:textSize="12sp"
                     android:ems="10"
-                    android:textSize="20sp"
-                    android:layout_margin="10dp"
                     android:hint="How is your sleep last night?"
                     android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/questionText5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_field"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="30dp"
+                    android:textSize="12sp"
                     android:ems="10"
-                    android:textSize="20sp"
-                    android:layout_margin="10dp"
                     android:hint="How is your appetite?"
                     android:inputType="textPersonName" />
 
-                <Button
-                    android:id="@+id/submitBttn"
-                    android:layout_width="wrap_content"
+
+                <CheckedTextView
+                    android:id="@+id/questionText3"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:text="Submit"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/baloo"
+                    android:hint="Are you feeling better than yesterday?"
+                    android:textSize="15sp" />
+
+                <CheckedTextView
+                    android:id="@+id/questionText1"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/baloo"
+                    android:hint="Have you eaten the medicines for today?"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/submitBttn"
+                    android:layout_width="179dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
+                    android:background="@drawable/submit_btn"
                     android:textColorHint="#AF3131"
                     app:rippleColor="#853D3D" />
 

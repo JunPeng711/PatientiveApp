@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.mpsd2.education.Modules1;
 
@@ -30,7 +31,8 @@ public class HealthEducationFragment extends Fragment implements View.OnClickLis
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_health_education, container, false);
 
-        Button modBtn1, backToHomeBtn;
+        ImageButton backToHomeBtn;
+        Button modBtn1;
 
         modBtn1 = view.findViewById(R.id.showBtn1);
         modBtn1.setOnClickListener(this);

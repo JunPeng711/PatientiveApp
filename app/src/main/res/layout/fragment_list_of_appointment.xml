@@ -18,34 +18,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/header"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/themecol"
-                tools:ignore="MissingConstraints">
+                android:layout_height="wrap_content">
 
-                <Button
+                <ImageView
+                    android:id="@+id/imageViewBanner"
+                    android:layout_width="398dp"
+                    android:layout_height="151dp"
+                    android:background="@drawable/top_banner7" />
+
+                <ImageButton
                     android:id="@+id/back"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/ic_back" />
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/left_arrow" />
 
-                <TextView
-                    android:id="@+id/textViewYourAppointment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/baloo"
-                    android:padding="10dp"
-                    android:text="Your Appointment"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textSize="40sp"
-                    tools:ignore="MissingConstraints" />
-
-            </LinearLayout>
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/app1"
@@ -57,165 +48,139 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
-                    android:background="@drawable/bg1"
-                    android:layout_margin="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/appointment_panel"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textViewAppointment1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/baloo"
                         android:padding="10dp"
                         android:text="Appointment 1"
-                        android:textStyle="bold"
-                        android:textSize="40dp"
-                        android:fontFamily="@font/baloo"
+                        android:textSize="30dp"
                         tools:ignore="MissingConstraints" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
                             android:text="Name: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:textSize="17dp" />
 
                         <TextView
                             android:id="@+id/viewName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="17dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Date: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-
-                        <TextView
-                            android:id="@+id/viewDate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Time: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-
-                        <TextView
-                            android:id="@+id/viewTime"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Patient Name: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-
-                        <TextView
-                            android:id="@+id/viewPatientName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
                             android:text="Patient IC: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:textSize="17dp" />
 
                         <TextView
                             android:id="@+id/viewPatientIC"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="17dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
                             android:text="Health Issues: "
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:textSize="17dp" />
 
                         <TextView
                             android:id="@+id/viewHealthIssues"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp" />
+                            android:fontFamily="@font/baloo"
+                            android:textSize="17dp" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:text="Date: "
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/viewDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:text="Time: "
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/viewTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="120dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/cancel_btn" />
 
                 </LinearLayout>
             </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintTop_toBottomOf="@+id/app1">
-
-                <Button
-                    android:id="@+id/deleteBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delete"
-                    android:layout_marginStart="150dp" />
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -226,15 +191,20 @@
 
                 <EditText
                     android:id="@+id/EditRoom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Enter Room ID"/>
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_field"
+                    android:hint="Enter Room ID"
+                    android:fontFamily="@font/baloo"
+                    android:paddingLeft="30dp"
+                    android:textSize="12sp"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/JoinBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Join"/>
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/join_btn" />
 
 
             </LinearLayout>

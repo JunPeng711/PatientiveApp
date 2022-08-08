@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ public class ListOfAppointmentFragment extends Fragment implements View.OnClickL
     Intent newIntent;
 
     EditText editRoom;
-    Button joinBtn;
+    ImageButton joinBtn;
 
     public ListOfAppointmentFragment() {
         // Required empty public constructor
@@ -47,7 +48,7 @@ public class ListOfAppointmentFragment extends Fragment implements View.OnClickL
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list_of_appointment, container, false);
 
-        Button backBtn;
+        ImageButton backBtn;
 
         backBtn = view.findViewById(R.id.back);
         backBtn.setOnClickListener(this);
@@ -55,7 +56,6 @@ public class ListOfAppointmentFragment extends Fragment implements View.OnClickL
         TextView name = view.findViewById(R.id.viewName);
         TextView date = view.findViewById(R.id.viewDate);
         TextView time = view.findViewById(R.id.viewTime);
-        TextView patientName = view.findViewById(R.id.viewPatientName);
         TextView patientIC = view.findViewById(R.id.viewPatientIC);
         TextView healthIssues = view.findViewById(R.id.viewHealthIssues);
 
@@ -65,11 +65,10 @@ public class ListOfAppointmentFragment extends Fragment implements View.OnClickL
         name.setText(newPreferences.getString("name", null));
         date.setText(newPreferences.getString("date", null));
         time.setText(newPreferences.getString("time", null));
-        patientName.setText(newPreferences.getString("patientName", null));
         patientIC.setText(newPreferences.getString("patientIC", null));
         healthIssues.setText(newPreferences.getString("healthIssues", null));
 
-        Button clear = view.findViewById(R.id.deleteBtn);
+        ImageButton clear = view.findViewById(R.id.deleteBtn);
 
         clear.setOnClickListener(new View.OnClickListener() {
             @Override

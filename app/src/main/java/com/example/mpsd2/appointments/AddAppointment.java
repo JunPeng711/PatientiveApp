@@ -14,6 +14,7 @@ import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mpsd2.CheckIn;
@@ -41,13 +42,13 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_add_appointment);
 
 
-        Button cancelBtn;
+        ImageButton cancelBtn;
 
         cancelBtn = findViewById(R.id.cancelBtn);
         cancelBtn.setOnClickListener(this);
 
 
-        Button addBtn = (Button) findViewById(R.id.addBtn);
+        ImageButton addBtn = (ImageButton) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(this);
 
         editDateText = findViewById(R.id.editDate);
@@ -75,13 +76,12 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
         name = findViewById(R.id.editName);
         date = findViewById(R.id.editDate);
         time = findViewById(R.id.editTime);
-        patientName = findViewById(R.id.editPatientName);
         patientIC = findViewById(R.id.editPatientIC);
         healthIssues = findViewById(R.id.editHealthIssues);
 
         Shared_pref = getSharedPreferences("add_appointment", MODE_PRIVATE);
         intent = new Intent(AddAppointment.this, HomeActivity.class);
-        if(Shared_pref.contains("name") && Shared_pref.contains("date") && Shared_pref.contains("time") && Shared_pref.contains("patientName") && Shared_pref.contains("patientIC") && Shared_pref.contains("healthIssues"))
+        if(Shared_pref.contains("name") && Shared_pref.contains("date") && Shared_pref.contains("time") && Shared_pref.contains("patientIC") && Shared_pref.contains("healthIssues"))
         {
             startActivity(intent);
         }
@@ -109,7 +109,6 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
                 String name = AddAppointment.this.name.getText().toString();
                 String date = AddAppointment.this.date.getText().toString();
                 String time = AddAppointment.this.time.getText().toString();
-                String patientName = AddAppointment.this.patientName.getText().toString();
                 String patientIC = AddAppointment.this.patientIC.getText().toString();
                 String healthIssues = AddAppointment.this.healthIssues.getText().toString();
 
@@ -117,7 +116,6 @@ public class AddAppointment extends AppCompatActivity implements View.OnClickLis
                 editor.putString("name", name);
                 editor.putString("date", date);
                 editor.putString("time", time);
-                editor.putString("patientName", patientName);
                 editor.putString("patientIC", patientIC);
                 editor.putString("healthIssues", healthIssues);
                 editor.commit();

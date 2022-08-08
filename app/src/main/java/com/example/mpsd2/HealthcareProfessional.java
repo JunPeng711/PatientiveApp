@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class HealthcareProfessional extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_healthcare_professional);
 
-        Button backToHomeBtn;
+        ImageButton backToHomeBtn;
 
         backToHomeBtn = findViewById(R.id.back);
         backToHomeBtn.setOnClickListener(this);
