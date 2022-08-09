@@ -47,7 +47,7 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="400dp"
+                    android:layout_height="370dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
@@ -129,54 +129,44 @@
                             android:textSize="17dp" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="310dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/baloo"
-                            android:text="Date: "
-                            android:textSize="17dp" />
+                        <ImageView
+                            android:layout_width="310dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/date_time_panel2" />
 
                         <TextView
                             android:id="@+id/viewDate"
-                            android:layout_width="match_parent"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/baloo"
-                            android:textSize="17dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/baloo"
-                            android:text="Time: "
-                            android:textSize="17dp" />
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="13dp"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/baloo" />
 
                         <TextView
                             android:id="@+id/viewTime"
-                            android:layout_width="match_parent"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/baloo"
-                            android:textSize="17dp" />
-                    </LinearLayout>
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="13dp"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/baloo" />
+                    </RelativeLayout>
 
                     <ImageButton
                         android:id="@+id/deleteBtn"
                         android:layout_width="120dp"
                         android:layout_height="45dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/cancel_btn" />
 
                 </LinearLayout>
