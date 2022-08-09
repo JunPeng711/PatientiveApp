@@ -50,7 +50,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="300dp"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginTop="30dp"
+                android:background="@drawable/profilepic"/>
 
         </RelativeLayout>
 
@@ -147,8 +148,62 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Healthcare Education"
+        android:fontFamily="@font/baloo"
+        android:textSize="20sp" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/doctor_panel"
+        android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@drawable/doctor_panel">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/baloo"
+                android:padding="10dp"
+                android:text="Protect Yourself\nAgainst COVID-19"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/showModBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="-6dp"
+                android:backgroundTint="#0984e3"
+                android:text="@string/show_all"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/module_icon2" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

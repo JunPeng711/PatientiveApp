@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +33,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private DatabaseReference reference;
 
     private String userID;
-
 
     TextView welcomeTxtView;
     SharedPreferences newPreferences;
@@ -84,6 +85,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         ImageButton healthcareProfBtn;
         ImageButton ProfBtn;
+        Button showModBtn;
 
         healthcareProfBtn = view.findViewById(R.id.HealthProfBtn);
         healthcareProfBtn.setOnClickListener(this);
@@ -91,6 +93,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         ProfBtn = view.findViewById(R.id.profileBttn);
         ProfBtn.setOnClickListener(this);
 
+        showModBtn = view.findViewById(R.id.showModBtn);
+        showModBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment(new HealthEducationFragment());
+            }
+        });
 
 
         TextView name = view.findViewById(R.id.viewName);
@@ -104,6 +113,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         date.setText(newPreferences.getString("date", null));
         time.setText(newPreferences.getString("time", null));
 
+
+
         return view;
     }
 
@@ -115,6 +126,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.profileBttn:
                 startActivity(new Intent(getActivity(),UserProfile.class));
+                break;
         }
+    }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager2 = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager2.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
     }
 }

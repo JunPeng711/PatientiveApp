@@ -13,6 +13,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,8 +22,6 @@ import com.example.mpsd2.databinding.ActivityHomeBinding;
 import java.util.Objects;
 
 public class HomeActivity extends AppCompatActivity{
-
-    //BottomNavigationView bottomNavigationView;
 
     ActivityHomeBinding binding;
 
